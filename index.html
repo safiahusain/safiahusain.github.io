@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- CSS Link -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/model.css">
   <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -40,22 +41,21 @@
 
 <section class="hero">
     <div class="accent-bg"></div>
-    <div class="col-3">
+    <div class="col-4 offset-md-1 hero-text-wrapper">
         <div class="hero-text">
-          <h1>My name <br><span id="hero_name">is Safia</span></h1>
-          <p>I am a professional <strong>Full Stack Web Developer</strong> with more than 3 years of experience.</p>
-      
-          <div class="hero-buttons">
-            <a href="#" class="btn-outline">Hire Me</a>
-            <a href="#projects" class="btn-primary">View Work</a>
-          </div>
-      
-          <div class="hero-tags">
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>JavaScript</span>
-            <span>jQuery</span>
-          </div>
+            <h1>My name <br><span id="hero_name">is Safia</span></h1>
+            <p>I am a professional <strong>Full Stack Web <br> Developer</strong> with more than 3 years of <br> experience.</p>
+        
+            <div class="hero-buttons">
+                <a href="#" class="btn-outline">Hire Me</a>
+                <a href="#projects" class="btn-primary">View Work</a>
+            </div>
+            <div class="hero-tags">
+                <span class="hero-span-left fw-semibold">PHP</span>
+                <span class="hero-span-left fw-semibold">Laravel</span>
+                <span class="hero-span-right fw-semibold">JavaScript</span>
+                <span class="hero-span-right fw-semibold">jQuery</span>
+            </div>
         </div>
     </div>
 
@@ -148,9 +148,14 @@
 </section>
 
 <!-- Skills Section -->
-
 <section id="skills" class="py-5">
-    <h3 class="skills-title text-center mb-5 fw-bold">Skills & Expertise</h3>
+    <div class="skills-title text-center mb-4">
+        <h2>Skills & Expertise</h2>
+        <div class="underline">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <br>
     <div class="container">
         <div class="row justify-content-center">
             <!-- Skill Card -->
@@ -272,170 +277,374 @@
     </div>
 </section>
 
-<!-- <section id="skills">
-    <h3 class="skills-title">Skills & Expertise</h3>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <div class="left_icon justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 24 24" fill="none" 
-                    stroke="#ffffff" stroke-width="2" 
-                    stroke-linecap="round" stroke-linejoin="round" 
-                    class="lucide lucide-code">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-            </div>
-            <h5>Backend Development</h5><p>PHP Laravel</p>
-        </div>
-        <div class="skill-card">
-            <div class="right_icon">
-                
-            </div>
-            <h5>Frontend Design</h5><p>HTML, CSS, jQuery</p>
-        </div>
-        <div class="skill-card">
-            <div class="left_icon">
-                
-            </div>
-            <h5>API Integration</h5><p>RESTful APIs</p>
-        </div>
-        <div class="skill-card">
-            <div class="right_icon">
-                
-            </div>
-            <h5>Database Management</h5><p>MySQL</p>
-        </div>
-        <div class="skill-card">
-            <div class="left_icon">
-                
-            </div>
-            <h5>Web Security</h5><p>Secure apps & solutions</p>
-        </div>
-        <div class="skill-card">
-            <div class="right_icon">
-                 
-            </div>
-            <h5>Version Control</h5><p>Git / GitHub</p>
-        </div>
-    </div>
-</section> -->
 
-<section class="projects" id="projects">
-<h3>Latest Projects</h3>
-<div class="projects-grid">
-    <div class="project-card">
-    <h4>01 Shoe Store Management</h4>
-    <p>Online shoe inventory & sales management system.</p>
-    <div class="tags"><span>Laravel</span><span>MySQL</span><span>jQuery</span></div>
+<section id="skills_sol" class="py-5">
+    <div class="skills-title text-center mb-4">
+        <h2 class="fw-bold">Complete Web Development Solutions</h2>
+        <div class="underline">
+            <span></span><span></span><span></span>
+        </div>
+        <br>
+        <p class=" text-center mb-4">I offer end-to-end web development services to bring your ideas to life</p>
     </div>
-    <div class="project-card">
-    <h4>02 POS Website Maintenance</h4>
-    <p>Improved performance and stability for retail POS system.</p>
-    <div class="tags"><span>PHP</span><span>JavaScript</span><span>Laravel</span></div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Skill Card -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-layers">
+                            <path d="M12 2 2 7l10 5 10-5-10-5Z" />
+                            <path d="m2 17 10 5 10-5" />
+                            <path d="m2 12 10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">Full Stack Development</h5>
+                        <p class="skill-web-p">End-to-end web application development with modern technologies and best practices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-plug">
+                            <path d="M12 22v-5" />
+                            <path d="M9 7V2" />
+                            <path d="M15 7V2" />
+                            <path d="M5 7h14" />
+                            <path d="M8 11h8" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">API Development & Integration</h5>
+                        <p class="skill-web-p">Design and implement RESTful APIs for seamless data exchange and third-party integrations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-smartphone">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">Responsive Website Design</h5>
+                        <p class="skill-web-p">Create beautiful, mobile-friendly websites that work perfectly on all devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <!-- Database -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-database">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                            <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">Database Design & Management</h5>
+                        <p class="skill-web-p">Design efficient database schemas and optimize queries for maximum performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-shield">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">Website Security</h5>
+                        <p class="skill-web-p">Implement security best practices to protect your web applications from threats.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Git -->
+            <div class="col-lg-3 col-md-6 col-sm-10 hover-card">
+                <div class="skill-card d-flex flex-column h-100">
+                    <div class="left_icon m-3 ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-wrench">
+                            <path d="M14.7 6.3a5 5 0 1 0-1.4 1.4l6.8 6.8a2 2 0 0 1-2.8 2.8l-6.8-6.8" />
+                        </svg>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="skill-web-h">Website Maintenance</h5>
+                        <p class="skill-web-p">Ongoing support, updates, and performance optimization for your web projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="project-card">
-    <h4>03 Dairy Product Platform</h4>
-    <p>Web platform for managing dairy item sales and supply chain.</p>
-    <div class="tags"><span>Laravel</span><span>HTML</span><span>RESTful APIs</span></div>
-    </div>
-</div>
 </section>
 
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <h3 class="text-center mb-4">Latest Projects</h3>
+    <div class="underline">
+        <span></span><span></span><span></span>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+        <div class="project-card col-lg-3 col-md-6 col-sm-10 m-2"
+            data-id="1"
+            data-title="Shoe Store Management System"
+            data-desc="E-commerce platform with warehouse, agent, and size management for efficient inventory control."
+            data-images='["images/profile_img.jpg","images/shoe2.jpg","images/profile_img.jpg"]'>
+            <div class="project-top">
+                <span class="project-number">01</span>
+                <div class="shape-circle"></div>
+                <div class="shape-square"></div>
+            </div>
+
+            <h5 class="project-title">Shoe Store Management System</h5>
+            <p class="project-desc">
+                E-commerce platform with warehouse, agent, and size management for efficient inventory control.
+            </p>
+
+            <div class="project-tags">
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>API</span>
+            </div>
+        </div>
+        <div class="project-card col-lg-3 col-md-6 col-sm-10 m-2"
+            data-id="2"
+            data-title="POS Website Maintenance"
+            data-desc="Improved performance and system stability for a retail point-of-sale system."
+            data-images='["images/pos1.jpg","images/profile_img.jpg","images/pos3.jpg"]'>
+            <div class="project-top">
+                <span class="project-number">02</span>
+                <div class="shape-circle"></div>
+                <div class="shape-square"></div>
+            </div>
+
+            <h5 class="project-title">POS Website Maintenance</h5>
+            <p class="project-desc">
+                Improved performance and system stability for a retail point-of-sale system.
+            </p>
+
+            <div class="project-tags">
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+            </div>
+        </div>
+        <div class="project-card col-lg-3 col-md-6 col-sm-10 m-2"
+            data-id="3"
+            data-title="Dairy Product Platform"
+            data-desc="Full-featured website for managing dairy items and fees with automated workflows."
+            data-images='["images/dairy1.jpg","images/dairy2.jpg","images/profile_img.jpg"]'>
+            <div class="project-top">
+                <span class="project-number">03</span>
+                <div class="shape-circle"></div>
+                <div class="shape-square"></div>
+            </div>
+
+            <h5 class="project-title">Dairy Product Platform</h5>
+            <p class="project-desc">
+                Full-featured website for managing dairy items and fees with automated workflows.
+            </p>
+
+            <div class="project-tags">
+                <span>Laravel</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="project-card col-lg-3 col-md-6 col-sm-10 m-2"
+            data-id="3"
+            data-title="Dairy Product Platform"
+            data-desc="Full-featured website for managing dairy items and fees with automated workflows."
+            data-images='["images/dairy1.jpg","images/dairy2.jpg","images/dairy3.jpg"]'>
+            <div class="project-top">
+                <span class="project-number">04</span>
+                <div class="shape-circle"></div>
+                <div class="shape-square"></div>
+            </div>
+
+            <h5 class="project-title">Book Subscription Platform</h5>
+            <p class="project-desc">
+                Subscription-based book reading site with purchase options and user management.
+            </p>
+
+            <div class="project-tags">
+                <span>Laravel</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+                <span>RESTful API</span>
+            </div>
+        </div>
+        <div class="project-card col-lg-3 col-md-6 col-sm-10 m-2"
+            data-id="3"
+            data-title="Dairy Product Platform"
+            data-desc="Full-featured website for managing dairy items and fees with automated workflows."
+            data-images='["images/dairy1.jpg","images/dairy2.jpg","images/dairy3.jpg"]'>
+            <div class="project-top">
+                <span class="project-number">05</span>
+                <div class="shape-circle"></div>
+                <div class="shape-square"></div>
+            </div>
+
+            <h5 class="project-title">E-commerce Admin Panel & APIs</h5>
+            <p class="project-desc">
+                Developed APIs and dashboards for managing online stores with real-time analytics.
+            </p>
+
+            <div class="project-tags">
+                <span>Laravel</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+                <span>RESTful API</span> 
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-10 m-2">
+        </div>
+    </div>
+</section>
+
+<!-- Modal (injected dynamically) -->
+<div id="dynamicModalContainer"></div>
 
 <section id="contact" class="contact-section">
-    <h3>Get In Touch</h3>
-    <p class="subtitle">
+    <h3 class="text-center mb-4">Get In Touch</h3>
+    <div class="underline">
+        <span></span><span></span><span></span>
+    </div>
+    <p class="subtitle mt-2">
         Ready to start your next project? Let's discuss how I can help bring your ideas to life.
     </p>
-
+    <br>
     <div class="contact-container">
-        <!-- Left: Contact Form -->
-        <div class="contact-form-box">
-        <h4>Send Message</h4>
-        <!-- <form>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Your full name">
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="your.email@example.com">
-
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
-
-            <button type="submit"><i>✈️</i> Send Message</button>
-        </form> -->
-        <form action="https://formsubmit.co/safiahussain.vu@gmail.com" method="POST">
-        <div>
-            <label>Name</label>
-            <input type="text" name="name" required placeholder="Your Name">
-        </div>
-
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" required placeholder="your.email@example.com">
-        </div>
-
-        <div>
-            <label>Message</label>
-            <textarea name="message" required placeholder="Tell me about your project..."></textarea>
-        </div>
-
-        <!-- Options (Hidden Fields) -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="New Message From Portfolio!">
-        <input type="hidden" name="_next" value="file:///D:/course-material/Portfolio/safia-portfolio/thankyou.html">
-
-        <button type="submit" style="
-            width: 100%; padding: 15px; 
-            background:#ff6700; color:white;
-            border:none; border-radius:6px;
-            font-size:18px; cursor:pointer;
-        ">Send Message</button>
-    </form>
-
-        </div>
-
-        <!-- Right: Contact Info -->
         <div class="contact-info-box">
-        <h4>Contact Information</h4>
-        <p>
-            Feel free to reach out through any of the following channels. I'm always excited to
-            discuss new opportunities and collaborate on interesting projects.
-        </p>
+            <p>
+                Feel free to reach out through any of the following channels. I'm always excited to
+                discuss new opportunities and collaborate on interesting projects.
+            </p>
 
-        <div class="info-card">
-            <div class="left_icon">📧</div>
-            <div>
-            <h5>Email</h5>
-            <p>safiahussain.vu@gmail.com</p>
+            <!-- EMAIL -->
+            <div class="info-card">
+                <div class="contact_icon bg-orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-mail">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <polyline points="22 6 12 13 2 6"></polyline>
+                    </svg>
+                </div>
+                <div>
+                    <h5>EMAIL</h5>
+                    <p><a href="mailto:safiahussain.vu@gmail.com">safiahussain.vu@gmail.com</a></p>
+                </div>
             </div>
-        </div>
 
-        <div class="info-card">
-            <div class="right_icon">📞</div>
-            <div>
-            <h5>Phone</h5>
-            <p>+92 370 4018519</p>
+                <!-- PHONE -->
+            <div class="info-card">
+                <div class="contact_icon bg-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-phone">
+                    <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07
+                        19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3
+                        a2 2 0 0 1 2 1.72c.12 1.05.38 2.07.78 3.03a2 2 0 0 1-.45 2.11L8.09 11.91
+                        a16 16 0 0 0 6 6l1.03-1.03a2 2 0 0 1 2.11-.45c.96.4 1.98.66 3.03.78A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                </div>
+                <div>
+                <h5>PHONE</h5>
+                <p><a href="tel:03704018519">0370-4018519</a></p>
+                </div>
             </div>
-        </div>
 
-        <div class="info-card">
-            <div class="left_icon">in</div>
-            <div>
-            <h5>LinkedIn</h5>
-            <p><a href="https://www.linkedin.com/in/safia-hussain" target="_blank">linkedin.com/in/safia-hussain</a></p>
+            <!-- LINKEDIN -->
+            <div class="info-card">
+                <div class="contact_icon bg-orange">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-linkedin">
+                    <rect x="2" y="2" width="20" height="20" rx="2"></rect>
+                    <circle cx="7" cy="8" r="1.5"></circle>
+                    <line x1="7" y1="11" x2="7" y2="17"></line>
+                    <path d="M11 11v3.5"></path>
+                    <path d="M11 8a1.5 1.5 0 0 1 1.5-1.5H13.5v9H11"></path>
+                </svg>
+                </div>
+                <div>
+                <h5>LINKEDIN</h5>
+                <p><a href="https://linkedin.com/in/safia-hussain" target="_blank">linkedin.com/in/safia-hussain</a></p>
+                </div>
             </div>
-        </div>
 
-        <div class="info-card">
-            <div class="left_icon">🐙</div>
-            <div>
-            <h5>GitHub</h5>
-            <p><a href="https://github.com/safiahussain" target="_blank">github.com/safiahussain</a></p>
+            <!-- GITHUB -->
+            <div class="info-card">
+                <div class="contact_icon bg-orange">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lucide lucide-github">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3"></path>
+                    <path
+                    d="M20 20v-3.87a3.37 3.37 0 0 0-.94-2.61
+                        6.72 6.72 0 0 0-1.72-1.2 5.44 5.44 0 0 0 1.27-3.8
+                        5.07 5.07 0 0 0-1.44-3.7s-1.18-.35-3.91 1.48
+                        a13.38 13.38 0 0 0-7 0C6.27 2.65 5.09 3 5.09 3
+                        A5.07 5.07 0 0 0 5 6.77a5.44 5.44 0 0 0 1.5 3.32
+                        c0 5.42 3.3 6.61 6.44 7 .4.07.54-.17.54-.38v-1.35
+                        c-2.62.57-3.17-1.26-3.17-1.26"></path>
+                </svg>
+                </div>
+                <div>
+                <h5>GITHUB</h5>
+                <p><a href="https://github.com/safiahussain" target="_blank">github.com/safiahussain</a></p>
+                </div>
             </div>
-        </div>
+        </div>                
+
+        <div class="contact-form-box">
+            <form action="https://formsubmit.co/safiahussain.vu@gmail.com" method="POST">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" required placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" required placeholder="Tell me about your project..."></textarea>
+                </div>
+
+                <!-- Hidden Options -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Message From Portfolio!">
+                <input type="hidden" name="_next" value="file:///D:/course-material/Portfolio/safia-portfolio/thankyou.html">
+
+                <button class="send-btn" type="submit">Send Message</button>
+            </form>
+
         </div>
     </div>
 </section>
@@ -483,22 +692,20 @@
 <div style="background:#0b0b0b; text-align:center; color:#777; padding:20px; font-size:14px; border-top:1px solid #222;">
   © 2025 <span style="color:#f4511e;">Safia</span>. All rights reserved.
 </div>
+<script src="js/model.js"></script>
 <script>
-  $(".btn-outline").click(function(e){
-    e.preventDefault();
-    $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top
-    }, 700);
-  });
-</script>
+    $(".btn-outline").click(function(e){
+        e.preventDefault();
+        $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top
+        }, 700);
+    });
 
-<script>
-$(document).ready(function(){
-$(".btn-primary").on("click", function(){
-$('html, body').animate({ scrollTop: $("#projects").offset().top }, 1000);
-});
-});
+    $(document).ready(function(){
+        $(".btn-primary").on("click", function(){
+            $('html, body').animate({ scrollTop: $("#projects").offset().top }, 1000);
+        });
+    });
 </script>
-
 </body>
 </html>
