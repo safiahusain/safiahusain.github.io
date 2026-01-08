@@ -1,145 +1,173 @@
-/* ===== Modal Overlay ===== */
+/* ----------------- MODAL ------------------- */
 .modal-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(15, 15, 15, 0.7);
-  backdrop-filter: blur(12px);
-  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(0,0,0,0.6);
   z-index: 9999;
-  animation: fadeIn 0.4s ease forwards;
+  backdrop-filter: blur(5px);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; } 
-  to { opacity: 1; }
-}
-
-/* ===== Modal Box ===== */
 .modal-box {
-  width: 85%;
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  box-shadow: 0 0 40px rgba(255, 90, 0, 0.4);
-  overflow: hidden;
-  position: relative;
-  transform: scale(0.9);
-  opacity: 0;
-  animation: zoomIn 0.5s ease forwards;
-}
-
-@keyframes zoomIn {
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* ===== Carousel Section ===== */
-.carousel {
-  position: relative;
+  background: linear-gradient(120deg, #f8f9fa, #e6e6e6);
+  padding: 20px;
   width: 100%;
-  height: 380px;
-  overflow: hidden;
+  max-width: 1200px;
+  border-radius: 10px;
+  position: relative;
+  animation: popup 0.4s ease-in-out;
 }
 
-.carousel img {
+.close-modal {
   position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;      /* 👈 top layer */
+  padding: 10px;      /* 👈 click area bigger */
+  line-height: 1;
+}
+
+/* ---------------- CAROUSEL (3 slides visible + active center) ---------------- */
+.carousel {
+  --nav-btn-size: 40px;
+  --nav-btn-bg: rgb(15, 23, 43);
+  --nav-marker-bg: rgb(15, 23, 43);
+  max-width: 1200px;
+  padding-block: 2rem;
+  display: flex; /* Flex layout ensures 3 images visible */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between slides */
+  overflow: hidden;
+  text-align: center;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel > div {
+  flex: 0 0 calc(100% / 3); /* Always 3 slides fit perfectly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  scroll-snap-align: center;
+}
+
+/* .carousel > div .img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* 
+.carousel > div .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-.carousel img.active {
-  opacity: 1;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0 0 0 / .25);
+  transform: scale(0.7);
+  opacity: 0.4;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+} */
+ 
+.carousel > div .img img {
+  width: 100%;
+  height: auto;        /* ✅ important */
+  object-fit: contain; /* ✅ poori image visible */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0 0 0 / .25);
+  transform: scale(0.7);
+  opacity: 0.4;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-/* ===== Carousel Buttons ===== */
-.carousel-btn {
+/* ACTIVE CENTER SLIDE */
+.carousel > div.active .img img {
+  transform: scale(1);
+  opacity: 1;
+}
+.carousel > div.active .img {
+  width: 600px;
+}
+
+/* NAV BUTTONS */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 26px;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 5;
-}
-.carousel-btn:hover {
-  background: #ff5a00;
-  box-shadow: 0 0 15px #ff5a00;
-}
-.prev { left: 20px; }
-.next { right: 20px; }
-
-/* ===== Dots Indicator ===== */
-.carousel-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 5;
-}
-.carousel-dots span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: 0.3s;
-}
-.carousel-dots span.active {
-  background: #ff5a00;
-  box-shadow: 0 0 8px #ff5a00;
-  width: 14px;
-  height: 14px;
-}
-
-/* ===== Content Section ===== */
-.modal-content {
-  padding: 30px 35px;
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.modal-title {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #ff5a00;
-  margin-bottom: 10px;
-}
-
-.modal-desc {
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ===== Close Button ===== */
-.close-modal {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  width: 45px;
+  height: 45px;
+  background: rgb(15, 23, 43);
+  color: white;
   border: none;
   border-radius: 50%;
-  font-size: 26px;
-  width: 44px;
-  height: 44px;
+  font-size: 22px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  opacity: 0.8;
   z-index: 10;
 }
-.close-modal:hover {
-  background: #ff5a00;
-  color: #fff;
-  box-shadow: 0 0 15px #ff5a00;
+
+.left-btn { left: 25px; }   /* <-- red-mark wala left button */
+.right-btn { right: 25px; } /* <-- red-mark wala right button */
+
+/* POPUP ANIMATION */
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@media (max-width: 768px) {
+
+  .carousel > div {
+    flex: 0 0 100%;
+  }
+
+  .carousel > div .img img {
+    width: 100%;
+    max-height: 70vh;      /* 👈 screen se bahar nahi jayegi */
+    object-fit: contain;  /* 👈 poori image visible */
+    transform: scale(1);  /* 👈 zoom remove */
+    opacity: 1;
+  }
+
+  .carousel > div.active .img {
+    width: 100%;
+  }
+}
+/* Hover / Touch Zoom Effect */
+.carousel > div .img img {
+  cursor: zoom-in;
+}
+
+/* Desktop hover */
+.carousel > div .img img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Click / Touch active */
+.carousel > div .img img.zoomed {
+  transform: scale(1.25);
+  opacity: 1;
+  z-index: 6;
+  cursor: zoom-out;
 }

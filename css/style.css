@@ -109,8 +109,8 @@ body {
     display: none;
   }
 
-  .navbar.active ul {
-    display: flex;
+  .navbar.active {
+    display: block;
   }
 
   .menu-toggle {
@@ -317,13 +317,14 @@ body {
     padding: 60px 6%;
   }
 
-  .hero-text {
-    order: 1;
+  /* Swap order: Image first, text second */
+  .hero-img-wrapper {
+    order: 1;  /* image comes first */
+    margin-bottom: 20px; /* thoda gap */
   }
 
-  .hero-img-wrapper {
-    order: 2;
-    margin-top: 30px;
+  .hero-text {
+    order: 2;  /* text comes after image */
   }
 
   .hero-text h3 {
@@ -349,6 +350,7 @@ body {
     margin-top: 12px;
   }
 }
+
 
 @media (max-width: 480px) {
   .hero-text h3 {
